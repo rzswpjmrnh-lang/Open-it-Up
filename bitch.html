@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Baby Open It</title>
+
+<meta property="og:title" content="Hey">
+<meta property="og:description" content="Just open it">
+<meta property="og:image" content="https://picsum.photos/600/400">
+
+<style>
+body{
+  margin:0;
+  height:100vh;
+  font-family:"Poppins", Arial, sans-serif;
+  background:linear-gradient(135deg,#0f0f14,#1a0f17);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  color:#f5d7e3;
+  overflow:hidden;
+}
+
+.container{
+  max-width:520px;
+  padding:24px;
+}
+
+h1{
+  font-weight:400;
+  margin-bottom:25px;
+  opacity:0.9;
+}
+
+.message{
+  opacity:0;
+  font-size:18px;
+  line-height:1.8;
+  animation:fadeIn 2s ease forwards;
+  animation-delay:3s;
+}
+
+@keyframes fadeIn{
+  to{opacity:1;}
+}
+
+/* Heart */
+.heart{
+  position:absolute;
+  top:12%;
+  left:50%;
+  transform:translateX(-50%) rotate(-45deg);
+  width:60px;
+  height:60px;
+  background:#ff4d6d;
+  animation:beat 1.5s infinite;
+}
+
+.heart::before,
+.heart::after{
+  content:"";
+  position:absolute;
+  width:60px;
+  height:60px;
+  background:#ff4d6d;
+  border-radius:50%;
+}
+
+.heart::before{
+  top:-30px;
+  left:0;
+}
+
+.heart::after{
+  left:30px;
+  top:0;
+}
+
+@keyframes beat{
+  0%,100%{transform:translateX(-50%) rotate(-45deg) scale(1);}
+  50%{transform:translateX(-50%) rotate(-45deg) scale(1.15);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="heart"></div>
+
+<div class="container">
+  <h1>This reminded me of you</h1>
+
+  <div class="message">
+    Not because it’s perfect,<br>
+    but because it feels warm, calm,<br>
+    and a little hard to explain.<br><br>
+
+    I don’t say this enough,<br>
+    but having you in my life<br>
+    genuinely makes things better.<br><br>
+
+    Happy Valentine’s Day 🤍
+  </div>
+</div>
+
+</body>
+</html>
