@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Hira ❤️</title>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{
+background:linear-gradient(135deg,#0f172a,#1e3a8a,#312e81);
+color:white;
+overflow-x:hidden;
+text-align:center;
+}
+
+.container{
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:30px;
+flex-direction:column;
+}
+
+.card{
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(12px);
+padding:35px;
+border-radius:20px;
+max-width:750px;
+box-shadow:0 0 30px rgba(255,255,255,.1);
+animation:fade 1.2s;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+p{
+line-height:1.8;
+margin:15px 0;
+text-align:left;
+}
+
+button{
+margin-top:20px;
+padding:14px 28px;
+font-size:18px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff4d88;
+color:white;
+transition:.3s;
+}
+
+button:hover{
+transform:scale(1.08);
+}
+
+.hidden{
+display:none;
+}
+
+#stars{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+}
+
+.star{
+position:absolute;
+width:2px;
+height:2px;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:.2}
+to{opacity:1}
+}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(30px)}
+to{opacity:1;transform:translateY(0)}
+}
+</style>
+
+</head>
+<body>
+
+<div id="stars"></div>
+
+<div class="container" id="intro">
+
+<div class="card">
+
+<h2>✨ Some moments deserve more than just a text...</h2>
+
+<br>
+
+<h3>This is one of them.</h3>
+
+<br>
+
+<button onclick="openCard()">🎁 Open Your Surprise</button>
+
+</div>
+
+</div>
+
+<div class="container hidden" id="birthday">
+
+<div class="card">
+
+<h1>🎉 Happy Birthday Hira ❤️</h1>
+
+<p>
+
+<b>Dear Hira,</b><br><br>
+
+Happy Birthday ❤️
+
+It's funny how we haven't known each other for that long, but somehow these past few months have become some of my favorite memories. Honestly, I'd even say they've been the best.
+
+<br><br>
+
+Every conversation, every late-night chat, all the random talks, the tea we spilled, the laughs, the jokes—I genuinely love every bit of it.
+
+<br><br>
+
+Those moments might seem small, but they've meant a lot to me, and I'm really grateful we got to share them.
+
+<br><br>
+
+Thank you for being someone I can laugh with, talk to, and make memories with.
+
+<br><br>
+
+I hope this birthday brings you happiness, success, peace, and everything you've been wishing for.
+
+<br><br>
+
+Here's to many more random conversations, inside jokes, and unforgettable memories.
+
+<br><br>
+
+Happy Birthday once again.
+
+You deserve the absolute best.
+
+❤️
+
+<br><br>
+
+<b>— From Awrish</b>
+
+</p>
+
+<button onclick="finish()">✨ One Last Thing...</button>
+
+</div>
+
+</div>
+
+<div class="container hidden" id="end">
+
+<div class="card">
+
+<h1>🎆 Happy Birthday Hira 🎆</h1>
+
+<br>
+
+<h2>May every wish you make tonight come true.</h2>
+
+<br>
+
+<h2>You deserve all the happiness in the world. ❤️</h2>
+
+<br>
+
+<h3>Thank you for being part of some of my favorite memories.</h3>
+
+<br>
+
+<h2>With Love,<br>Awrish ❤️</h2>
+
+</div>
+
+</div>
+
+<script>
+
+for(let i=0;i<150;i++){
+
+let s=document.createElement("div");
+
+s.className="star";
+
+s.style.left=Math.random()*100+"vw";
+
+s.style.top=Math.random()*100+"vh";
+
+s.style.animationDelay=Math.random()*2+"s";
+
+document.getElementById("stars").appendChild(s);
+
+}
+
+function openCard(){
+
+document.getElementById("intro").classList.add("hidden");
+
+document.getElementById("birthday").classList.remove("hidden");
+
+}
+
+function finish(){
+
+document.getElementById("birthday").classList.add("hidden");
+
+document.getElementById("end").classList.remove("hidden");
+
+}
+
+</script>
+
+</body>
+</html>
